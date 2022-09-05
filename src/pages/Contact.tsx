@@ -6,9 +6,9 @@ import Input from "../components/Input";
 import Button from "components/Button";
 
 export default function Contact() {
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-  }
+  // function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  //   e.preventDefault();
+  // }
   return (
     <main className="text-white my-20 mx-6 md:mx-28 lg:mx-40 lg:flex lg:place-items-center lg:justify-between">
       <section className="my-8 lg:flex lg:justify-around lg:w-[65%]">
@@ -30,7 +30,7 @@ export default function Contact() {
           {/* <img src={insta} alt="" className="w-8 h-8 md:w-12 md:h-12" /> */}
         </div>
       </section>
-      <form onSubmit={handleSubmit} className="mb-8 lg:w-[30%]">
+      <form action="https://formspree.io/f/xpzbnjzj" className="mb-8 lg:w-[30%]" method="POST">
         <div className="h-full w-full">
           <label htmlFor="nome" className="font-bold">Nome</label>
           <Input id="nome" autoComplete="off" />
