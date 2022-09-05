@@ -6,7 +6,7 @@ export default function Header() {
     <header className="mx-6 md:mx-8 lg:mx-40 md:flex place-items-center justify-between">
       <div className="flex justify-center text-center my-4">
         <p className="text-white mr-1 font-bold text-xl md:text-3xl">
-          Logo <strong className="text-orange font-bold">Protifólio</strong>
+          Sérgio <strong className="text-orange font-bold">Valerio</strong>
         </p>
       </div>
       <nav className="flex justify-center text-white lowercase text-md md:text-xl lg:text-3xl list-none">
