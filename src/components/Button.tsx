@@ -2,7 +2,6 @@ import React, { ButtonHTMLAttributes } from "react";
 
 interface IButton {
   children: React.ReactNode;
-  // rest?: ButtonHTMLAttributes<HTMLButtonElement>;
 }
 
 export default function Button({ children, ...rest }: IButton & ButtonHTMLAttributes<HTMLButtonElement>) {

@@ -17,6 +17,9 @@ module.exports = {
       fontFamily: {
         sans: "Poppins, sans-serif",
       },
+      backgroundImage: {
+        "laptop": "url('../public/assets/laptop-vector-png.png')"
+      }
     },
   },
   plugins: [],

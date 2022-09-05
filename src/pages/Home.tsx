@@ -4,6 +4,7 @@ import downArrow from "assets/Down-Arrow.png";
 import skills from "assets/skills.png";
 import { Paperclip } from "phosphor-react";
 import projetos from "projetos.json";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   function handleClick() {
@@ -25,9 +26,11 @@ export default function Home() {
             </strong>{" "}
             e novas experiencias digitais.
           </p>
+          <Link to="/contato">
+            <Button onClick={handleClick}>Vamos Conversar!</Button>
+          </Link>
         </div>
         <div>
-          <Button onClick={handleClick}>Vamos Conversar!</Button>
           <div className="flex my-12 w-full justify-center">
             <img src={downArrow} alt="" />
           </div>
@@ -75,9 +78,9 @@ export default function Home() {
           <h3 className="font-bold text-xl">
             Aqui estão alguns de meus projetos
           </h3>
-          <div className="flex justify-center text-xl">
+          <Link to="/projetos" className="flex justify-center text-xl">
             <Button>Ver mais!</Button>
-          </div>
+          </Link>
         </div>
         <div className="grid grid-cols-2 mt-4">
           {projetos.map((projeto) => (
@@ -94,9 +97,9 @@ export default function Home() {
         <h3 className="font-bold text-xl text-center">
           Vamos conversar sobre o seu projeto?
         </h3>
-        <div className="flex justify-center text-xl mt-4">
+        <Link to="/contato" className="flex justify-center text-xl mt-4">
           <Button>Contato</Button>
-        </div>
+        </Link>
       </section>
     </main>
   );
