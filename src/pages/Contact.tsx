@@ -33,11 +33,11 @@ export default function Contact() {
       <form action="https://formspree.io/f/xpzbnjzj" className="mb-8 lg:w-[30%]" method="POST">
         <div className="h-full w-full">
           <label htmlFor="nome" className="font-bold">Nome</label>
-          <Input id="nome" autoComplete="off" />
+          <Input id="nome" autoComplete="off" name="nome" />
         </div>
         <div className="h-full w-full mt-4">
           <label htmlFor="email" className="font-bold">Email</label>
-          <Input id="email" type="email" autoComplete="off" />
+          <Input id="email" type="email" autoComplete="off" name="email" />
         </div>
         <div className="h-full w-full mt-4">
           <label htmlFor="mensagem" className="font-bold">Mensagem</label>
