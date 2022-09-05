@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       colors: {
         black: "#222831",
-        gray: "#393E46",
+        gray: "#444444",
         white: "#EEEEEE",
         orange: "#F05454",
       },
@@ -19,6 +19,9 @@ module.exports = {
       },
       backgroundImage: {
         "laptop": "url('../public/assets/laptop-vector-png.png')"
+      },
+      backgroundSize: {
+        "hover": "2px"
       }
     },
   },

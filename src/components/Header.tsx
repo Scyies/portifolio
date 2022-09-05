@@ -10,16 +10,23 @@ export default function Header() {
         </p>
       </div>
       <nav className="flex justify-center text-white lowercase text-md md:text-xl lg:text-3xl list-none">
-        <Link to="/" className="mr-4 md:mr-8 lg:mr-12 hover:border-b-2 border-orange">
+        <Link to="/" 
+          id="nav__hover" 
+          className="mr-4 md:mr-8 lg:mr-12"
+        >
           Home
         </Link>
         <Link
           to="/projetos"
-          className="mr-4 md:mr-8 lg:mr-12 hover:border-b-2 border-orange"
+          className="mr-4 md:mr-8 lg:mr-12"
+          id="nav__hover"
         >
           Projetos
         </Link>
-        <Link to="/contato" className="hover:border-b-2 border-orange">
+        <Link to="/contato" 
+          className=""
+          id="nav__hover"
+        >
           Contato
         </Link>
       </nav>

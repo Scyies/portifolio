@@ -6,3 +6,20 @@ body {
   @apply bg-black;
   -webkit-font-smoothing: antialiased;
 }
+
+#nav__hover {
+  @apply bg-gradient-to-r from-orange to-orange;
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: 50% calc(100% - 0px);
+  display: inline-block;
+  transition: background-size 0.3s;
+}
+
+#nav__hover:hover {
+  background-size: 100% 2px;
+}
+
+#nav__hover::active {
+  background-size: 100% 2px;
+}
