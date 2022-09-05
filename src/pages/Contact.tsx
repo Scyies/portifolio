@@ -10,23 +10,23 @@ export default function Contact() {
     e.preventDefault();
   }
   return (
-    <main className="text-white mx-6">
-      <section className="my-8">
-        <div>
-          <h1 className="font-bold text-xl text-center">Entre em contato!</h1>
-          <p className="text-gray my-4">
+    <main className="text-white my-20 mx-6 md:mx-28 lg:mx-40 lg:flex lg:place-items-center lg:justify-between">
+      <section className="my-8 lg:flex lg:justify-around">
+        <div className="lg:w-[40%]">
+          <h1 className="font-bold text-xl md:text-3xl text-center">Entre em contato!</h1>
+          <p className="text-gray md:text-2xl my-4">
             Você pode entrar em contato por{" "}
             <strong className="font-medium text-orange">email</strong> ou uma de
             minhas <strong className="font-medium text-orange"> redes sociais.</strong>
           </p>
         </div>
-        <div className="flex justify-center my-8">
-          <img src={linkedinLogo} alt="" className="w-8 h-8 mr-8" />
-          <img src={gitHub} alt="" className="w-8 h-8 mr-8" />
-          <img src={insta} alt="" className="w-8 h-8" />
+        <div className="flex justify-center my-8 lg:flex-col lg:mx-8">
+          <img src={linkedinLogo} alt="" className="w-8 h-8 mr-8 md:mr-12 md:w-12 md:h-12 lg:mb-8" />
+          <img src={gitHub} alt="" className="w-8 h-8 mr-8 md:mr-12 md:w-12 md:h-12 lg:mb-8" />
+          <img src={insta} alt="" className="w-8 h-8 md:w-12 md:h-12" />
         </div>
       </section>
-      <form onSubmit={handleSubmit} className="mb-8">
+      <form onSubmit={handleSubmit} className="mb-8 lg:w-[50%]">
         <div className="h-full w-full">
           <label htmlFor="nome" className="font-bold">Nome</label>
           <Input id="nome" autoComplete="off" />
@@ -46,7 +46,7 @@ export default function Contact() {
           >
           </textarea>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center text-2xl">
           <Button type="submit">Enviar mensagem</Button>
         </div>
       </form>

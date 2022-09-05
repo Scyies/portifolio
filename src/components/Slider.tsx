@@ -27,19 +27,16 @@ export default function Slider() {
   }
 
   return (
-    <section>
-      <div className="relative mb-8 min-h-[180px] w-full" onClick={() => navigate(`/projeto=${currentIndex}`)}>
-        <img
-          src="assets/laptop-vector-png.png"
-          alt=""
-          className="z-10 absolute"
-        />
-        <div className="flex flex-row justify-center h-[150px] w-[235px] mx-auto">
+    <section className="my-16 lg:max-w-[40vw]">
+      <div className="mb-8 top-0 z-0" 
+        onClick={() => navigate(`/projeto=${currentIndex}`)}
+      >
+        <div className="flex flex-row justify-center aspect-video mx-auto z-0">
           {projects && (
             <img
               src={projects[currentIndex].image}
               alt=""
-              className="z-0 object-cover h-full w-full"
+              className="z-0 object-fill h-full w-full lg:w-[40vw]"
             />
           )}
         </div>
