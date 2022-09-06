@@ -20,8 +20,6 @@ export default function Slider() {
 
   const navigate = useNavigate();
 
-  console.log(projects);
-
   function nextImage() {
     if (currentIndex < maxSlider - 1) {
       setCurrentIndex(currentIndex + 1);
