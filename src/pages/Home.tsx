@@ -28,7 +28,7 @@ export default function Home() {
             <span className="text-orange ml-1 font-medium">interativos</span> e
             novas experiencias digitais.
           </p>
-          <Link to="/contato" className="md:text-2xl lg:text-3xl">
+          <Link to="/contato" className="md:text-2xl lg:text-3xl inline-block">
             <Button onClick={handleClick}>Vamos Conversar!</Button>
           </Link>
         </div>

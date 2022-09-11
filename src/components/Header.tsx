@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../assets/Logo.svg";
 
 export default function Header() {
   return (
     <header className="mx-6 md:mx-8 lg:mx-40 md:flex place-items-center justify-between">
-      <div className="flex justify-center text-center my-4">
-        <p className="text-white mr-1 font-bold text-xl md:text-3xl">
-          Sérgio <strong className="text-orange font-bold">Valerio</strong>
-        </p>
+      <div className="flex justify-center text-center h-10 w-10 my-4">
+        <img src={Logo} alt="" />
       </div>
       <nav className="flex justify-center text-white lowercase text-md md:text-xl lg:text-3xl list-none">
         <Link to="/" 
