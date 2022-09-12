@@ -4,13 +4,17 @@ import downArrow from "assets/Down-Arrow.png";
 import skills from "assets/skills.png";
 import { Paperclip } from "phosphor-react";
 import projetos from "projetos.json";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import laptopEarth from "assets/Notebook Earth.png";
 import profileIcon from "assets/Profile Icon.png";
 
 export default function Home() {
-  function handleClick() {
-    console.log("sim");
+
+  function scrollDown() {
+    window.scrollTo({
+      top: 600,
+      behavior: "smooth"
+    });
   }
 
   return (
@@ -29,17 +33,20 @@ export default function Home() {
             novas experiencias digitais.
           </p>
           <Link to="/contato" className="md:text-2xl lg:text-3xl inline-block">
-            <Button onClick={handleClick}>Vamos Conversar!</Button>
+            <Button>Vamos Conversar!</Button>
           </Link>
         </div>
         <div>
-          <div className="flex my-12 w-full justify-center">
+          <Button onClick={scrollDown} className="flex my-12 w-full justify-center">
             <img src={downArrow} alt="" />
-          </div>
+          </Button>
         </div>
       </section>
 
-      <section className="mt-12 flex flex-col md:flex-row justify-between">
+      <section
+        id="skills"
+        className="mt-12 flex flex-col md:flex-row justify-between"
+      >
         <div className="lg:flex flex-col lg:max-w-[40vw]">
           <h2 className="font-bold text-white text-xl md:text-3xl">
             <span className="text-orange font-bold">Habilidades</span> e
@@ -117,13 +124,18 @@ export default function Home() {
             </Link>
           </div>
           <div className="grid grid-cols-2 mt-4 md:mt-0 md:max-w-[50%]">
-            {projetos.map((projeto: { id: React.Key | null | undefined; image: string | undefined; }) => (
-              <img
-                key={projeto.id}
-                src={projeto.image}
-                className="object-cover h-full w-full"
-              />
-            ))}
+            {projetos.map(
+              (projeto: {
+                id: React.Key | null | undefined;
+                image: string | undefined;
+              }) => (
+                <img
+                  key={projeto.id}
+                  src={projeto.image}
+                  className="object-cover h-full w-full"
+                />
+              )
+            )}
           </div>
         </div>
       </section>
